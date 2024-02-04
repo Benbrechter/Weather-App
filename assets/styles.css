@@ -24,7 +24,7 @@ main{
     margin: 15px 0 0 10px;
 height: 750px;
 width: 25%;
-border: solid black;
+
 }
 h2{
    display: flex;
@@ -51,15 +51,28 @@ h2{
     font-size: 17px;
    
 }
+.search-section{
+    border-bottom: 5px black;
+}
+.pre-sets{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+.pre-sets button{
+    font-size:large ;
+    padding: 8px;
+    margin:10px;
+}
 .box-2{
     margin: 15px 0 0 15px;
   height: 250px;
   width: 98%;
-  border: solid black;  
+  border: 1px solid grey;  
 }
 .box-3{
     margin: 35px 0 0 15px;
     height: 300px;
     width: 98%;
-    border: solid black;  
+     
   }
