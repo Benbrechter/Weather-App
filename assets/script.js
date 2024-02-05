@@ -5,19 +5,25 @@ var humidityDisplay = document.querySelector('#humidity-display');
 
 let apiKey = '0a4a3a2ba95dc7f27ed0c81a22a94389';
 let city = 'Houston';
-let units = 'standard';
 
-let queryURL = "http://api.openweathermap.org/data/2.5/weather?q=" + city + "&appid=" + apiKey + "&units=" + units;
+let queryURL = "http://api.openweathermap.org/data/2.5/weather?q=" + city + "&appid=" + apiKey + "&units=Imperial";
 
-fetch(queryURL)
-.then(response => response.json())
-.then(json => console.log(json))
+var searchCity = document.querySelector("#user-city")
+var searchBtn = document.querySelector("#search-btn")
 
+async function userCity(city){    
+const response = await fetch(queryURL);
+var data = await response.json();
+console.log(data);
 
+cityDisplay.innerHTML = data.name + dayjs().format(' MM/DD/YY');
+tempDisplay.innerHTML = "Tempeture: " + Math.round(data.main.temp)  + " °f" ;
+windDisplay.innerHTML = "Wind Speed: " +  Math.round(data.wind.speed) + " mph";
+humidityDisplay.innerHTML = "Humidity: " + data.main.humidity + "%"
 
+}
 
-
-
-//var userCity = function(city){
-
-//}
+searchBtn.addEventListener('click', ()=>{
+userCity(searchCity.value)
+})
+userCity()

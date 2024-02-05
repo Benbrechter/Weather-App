@@ -65,10 +65,23 @@ h2{
     margin:10px;
 }
 .box-2{
+    display: flex;
     margin: 15px 0 0 15px;
   height: 250px;
   width: 98%;
-  border: 1px solid grey;  
+  border-left: 1px solid grey;  
+}
+.openweathermap{
+    margin: 8px 0 0 30px;
+    width: max-content;
+}
+.box-2 h1{
+    margin-left: 5px;
+    width: max-content;
+}
+.box-2 p{
+    margin-left: 5px;
+    width: max-content; 
 }
 .box-3{
     margin: 35px 0 0 15px;
