@@ -26,6 +26,7 @@ humidityDisplay.innerHTML = "Humidity: " + data.main.humidity + "%"
 searchBtn.addEventListener('click', ()=>{
 userCity(searchCity.value)
 forecastCity(searchCity.value)
+window.localStorage.setItem('city',searchCity.value )
 })
 
 document.getElementById('city-preset').addEventListener('click', () => {
@@ -56,6 +57,11 @@ var hum3 = document.querySelector('#hum3')
 var hum4 = document.querySelector('#hum4')
 var hum5 = document.querySelector('#hum5')
 //these are calling to the humidity tags 
+var day1 = document.querySelector('#day1')
+var day2 = document.querySelector('#day2')
+var day3 = document.querySelector('#day3')
+var day4 = document.querySelector('#day4')
+var day5 = document.querySelector('#day5')
 
 async function forecastCity(city) {
     let url = "https://api.openweathermap.org/data/2.5/forecast?q="+ city + "&units=Imperial&appid=0a4a3a2ba95dc7f27ed0c81a22a94389" ;
@@ -83,5 +89,12 @@ hum2.innerHTML = "Humidity: " + Math.round(data.list[1].main.humidity) + "%";
 hum3.innerHTML = "Humidity: " + Math.round(data.list[2].main.humidity) + "%";
 hum4.innerHTML = "Humidity: " + Math.round(data.list[3].main.humidity) + "%";
 hum5.innerHTML = "Humidity: " + Math.round(data.list[4].main.humidity) + "%";
+
+day1.innerHTML = dayjs().format(' MM/DD/YY');
+day2.innerHTML = dayjs().add(1, 'day').format(' MM/DD/YY');
+day3.innerHTML = dayjs().add(2, 'day').format(' MM/DD/YY');
+day4.innerHTML = dayjs().add(3, 'day').format(' MM/DD/YY');
+day5.innerHTML = dayjs().add(4, 'day').format(' MM/DD/YY');
+
 }
 forecastCity('Houston')

@@ -1,3 +1,8 @@
+:root{
+ --main-font:Verdana, Geneva, Tahoma, sans-serif;  
+ --sub-font: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
+
 body{
     margin: 0;
     padding: 0;
@@ -11,6 +16,7 @@ main{
     display: flex;
 }
 .nav h1 {
+    font-family: var(--main-font);
  font-size: 30px;
  color: aliceblue;
 }
@@ -31,10 +37,11 @@ h2{
     justify-content: center;
     font-size:25px ;
     font-weight:bold;
+    font-family: var(--main-font);
 }
 .city-name{
  box-sizing: border-box;
-  margin-left: 9px;
+  margin: 0 0 5px 9px;
   width: 95%;  
   height: 38px;
   border-radius: 5px;
@@ -42,27 +49,28 @@ h2{
 .search{
     background:#2196F3;
     box-sizing: border-box;
-    margin: 10px 8px;
+    margin: 20px 8px;
     height: 35px;
     width: 95%;  
     border-radius: 5px;
     border: 1px solid grey;
     cursor: pointer;
     font-size: 17px;
-   
+    font-family: var(--sub-font)
 }
-.search-section{
-    border-bottom: 5px black;
-}
+
 .pre-sets{
+    margin-top: 15px;
     display: flex;
     justify-content: center;
     flex-direction: column;
+    border-top: 3px solid black;
 }
 .pre-sets button{
     font-size:large ;
     padding: 8px;
-    margin:10px;
+    margin:20px 10px 10px 10px;
+    font-family: var(--sub-font)
 }
 .box-2{
     display: flex;
@@ -71,17 +79,15 @@ h2{
   width: 98%;
   border-left: 1px solid grey;  
 }
-.openweathermap{
-    margin: 8px 0 0 100px;
-    width: max-content;
-}
 .box-2 h1{
     margin-left: 5px;
     width: max-content;
+    font-family: var(--main-font);
 }
 .box-2 p{
     margin-left: 5px;
     width: max-content; 
+    font-family: var(--sub-font);
 }
 .box-3{
     display: flex;
@@ -91,6 +97,7 @@ h2{
      
   }
   .dayforcast {
+    font-family: var(--main-font);
  margin-left:35px;
  font-size:25px ;
   }
@@ -98,6 +105,14 @@ h2{
     background-color: grey;
     margin-left:15px ;
     width: 275px;
-    height: 300px;
+    height: 270px;
+    border-radius: 5px;
+    box-shadow: 10px 5px 5px black;
+    
+}
+.day h1{
     text-align: center;
+}
+.day p {
+    font-family: var(--sub-font)
 }
