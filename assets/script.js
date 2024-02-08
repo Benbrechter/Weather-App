@@ -9,7 +9,7 @@ var searchCity = document.querySelector("#user-city")
 var searchBtn = document.querySelector("#search-btn")
 
 async function userCity(city){    
-    let queryURL = "http://api.openweathermap.org/data/2.5/weather?q=" + city + "&appid=" + apiKey + "&units=Imperial";
+    let queryURL = "https://api.openweathermap.org/data/2.5/weather?q=" + city + "&appid=" + apiKey + "&units=Imperial";
 
 const response = await fetch(queryURL);
 var data = await response.json();
