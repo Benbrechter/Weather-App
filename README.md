@@ -14,5 +14,5 @@ Java Script to connect the API and add functionality to the webpage.
 # Links
 link to the openweather API - https://openweathermap.org/
 <br>
-link to webpage -
+link to webpage - https://benbrechter.github.io/Weather-App/ 
 
